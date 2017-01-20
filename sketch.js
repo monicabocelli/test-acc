@@ -21,8 +21,19 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
     
-    var magnitude = int(map(value, 0, 100, 0, 10)); 
+    var magnitude = int(map(value, 0, 100, 0, 10));
     
+    textSize(height/40);
+    textAlign(CENTER);
+    textStyle(NORMAL);
+    text("Magnitude", width/2, height - height/5);
+        
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    text(magnitude,width/2, height - height/6.7);
+    
+    /*
     if (value > 0){
         
     //CREATE THE ELLIPSE AREA
@@ -54,7 +65,7 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);*/
         
-    }
+   // }
     
     /*
     //draw dots and given methods (actions)
@@ -72,10 +83,10 @@ function draw(){
 
 function deviceShaken(){
     
-    do {
+    //do {
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-    }
-    while(value > 0);
+   // }
+   // while(value > 0);
    
     
    /*
