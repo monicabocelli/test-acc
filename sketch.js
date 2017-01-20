@@ -1,9 +1,10 @@
 var dots = [];
 
-var value = 0;  //starting value of earthquake
+//var value = 0;  //starting value of earthquake
 
 var magnitude;
 
+var acc = abs(accelerationX) + abs(accelerationY) * abs(accelerationZ);
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -11,7 +12,7 @@ function setup(){
 }
 
 function draw(){
-    background(204);
+     background(204);
     
      textSize(height/20);
      textAlign(CENTER);
@@ -20,15 +21,15 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var finalValue = deviceShaken(value);
-    var magnitude = int(map(finalValue, 0, 500, 0, 10)); 
+    value = deviceShaken();
+    var magnitude = int(map(value, 0, 500, 0, 10)); 
     
-    if (finalValue > 0){
+    if (value > 0){
         
     //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = finalValue * 2; 
+    var r = value * 2; 
     
     noFill();
     stroke(0);
@@ -52,7 +53,7 @@ function draw(){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(finalValue, width/2, height - height/8);
+    text(value, width/2, height - height/8);
         
     }
     
@@ -70,12 +71,12 @@ function draw(){
 }
 
 
-function deviceShaken(v){
+function deviceShaken(){
     
-    var acc = v * (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)); 
+    //var acc = v * (abs(accelerationX) + abs(accelerationY) * abs(accelerationZ)); 
     
     while(acc > 0){
-      acc = acc + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));  
+      acc = acc + (abs(accelerationX) + abs(accelerationY) * abs(accelerationZ));  
     }
     return acc;
     
