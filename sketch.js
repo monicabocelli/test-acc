@@ -27,7 +27,8 @@ function draw(){
         
     //CREATE THE ELLIPSE AREA
     var x = width/2;
-    var y = height/2;    var r = value * 2; 
+    var y = height/2;    
+    var r = value * 10; 
     
     noFill();
     stroke(0);
@@ -72,7 +73,7 @@ function draw(){
 function deviceShaken(){
     
     do {
-    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     }
     while(value > 0);
    
