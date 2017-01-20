@@ -83,7 +83,7 @@ function deviceShaken(){
     //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)    //no
     //value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     //value = value + (accelerationX + accelerationY + accelerationZ);
-    value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     
     /*
     while(acc > 0){
