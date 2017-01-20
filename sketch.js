@@ -15,17 +15,13 @@ function draw(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
-    
-    //prova valore accelerazione
-    textSize(height/30);
+
+    textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/6);
+    text(value, width/2, height - height/8);
     
-  
-    
-    /*
-    var magnitude = int(map(value, 0, 500, 0, 10)); 
+    var magnitude = int(map(value, 0, 100, 0, 10)); 
     
     if (value > 0){
         
@@ -52,13 +48,13 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    textSize(height/50);
+    /*textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/8);
+    text(value, width/2, height - height/8);*/
         
     }
-    */
+    
     /*
     //draw dots and given methods (actions)
       noStroke();
@@ -75,22 +71,11 @@ function draw(){
 
 function deviceShaken(){
     
-   // var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); //no
-    //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)    //no
-    //value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-    //value = value + (accelerationX + accelerationY + accelerationZ);
-    
     do {
     value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     }
     while(value > 0);
-    /*
-    while(acc > 0){
-        acc = acc + (abs(accelerationX) * abs(accelerationY) * abs(accelerationZ));  
-    }
-    
-   return acc;
-   */
+   
     
    /*
     //create objects
