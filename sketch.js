@@ -1,5 +1,6 @@
 var dots = [];
-var value = deviceShaken();
+var value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+//var value = deviceShaken();
 //var value = 0;  //starting value of earthquake
 
 
@@ -17,9 +18,17 @@ function draw(){
      textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+    
+    //prova valore accelerazione
+    textSize(height/30);
+    textAlign(CENTER);
+    textStyle(NORMAL);    
+    text(value, width/2, height - height/6);
     
    // var value = deviceShaken();
+    
+    /*
     var magnitude = int(map(value, 0, 500, 0, 10)); 
     
     if (value > 0){
@@ -53,7 +62,7 @@ function draw(){
     text(value, width/2, height - height/8);
         
     }
-    
+    */
     /*
     //draw dots and given methods (actions)
       noStroke();
@@ -70,14 +79,17 @@ function draw(){
 
 function deviceShaken(){
     
-    var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); 
+   // var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); 
     
+    value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    
+    /*
     while(acc > 0){
         acc = acc + (abs(accelerationX) * abs(accelerationY) * abs(accelerationZ));  
     }
     
    return acc;
-   
+   */
     
    /*
     //create objects
