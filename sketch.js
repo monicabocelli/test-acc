@@ -1,5 +1,5 @@
 var dots = [];
-var value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+var value = 0;
 //var value = deviceShaken();
 //var value = 0;  //starting value of earthquake
 
@@ -24,7 +24,7 @@ function draw(){
     textSize(height/30);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/6);
+    text("Il valore:" + value, width/2, height - height/6);
     
    // var value = deviceShaken();
     
@@ -80,7 +80,7 @@ function draw(){
 function deviceShaken(){
     
    // var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); 
-    
+    //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     
     /*
