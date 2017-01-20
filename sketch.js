@@ -20,7 +20,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    //value = deviceShaken();
+    value = deviceShaken();
     var magnitude = int(map(value, 0, 500, 0, 10)); 
     
     if (value > 0){
@@ -74,9 +74,9 @@ function deviceShaken(){
    value = abs(accelerationX) + abs(accelerationY) * abs(accelerationZ); 
     
     while(value > 0){
-     value = value + (abs(accelerationX) + abs(accelerationY) * abs(accelerationZ));  
+     var newvalue = value + (abs(accelerationX) + abs(accelerationY) * abs(accelerationZ));  
     }
-    return value;
+    return newvalue;
     
    /*
     //create objects
@@ -86,8 +86,7 @@ function deviceShaken(){
     */
 }
 
-function calculateAcceleration(value){
-    
+
 
 /*
 function QuakeDots(){
