@@ -20,7 +20,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var finalValue = deviceShaken();
+    var finalValue = deviceShaken(value);
     var magnitude = int(map(finalValue, 0, 500, 0, 10)); 
     
     if (finalValue > 0){
@@ -70,7 +70,7 @@ function draw(){
 }
 
 
-function deviceShaken(){
+function deviceShaken(acc){
     
     var acc = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);  
     while(acc > 0){
