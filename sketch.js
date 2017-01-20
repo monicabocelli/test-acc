@@ -24,7 +24,7 @@ function draw(){
     textSize(height/30);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text("value", width/2, height - height/6);
+    text(value, width/2, height - height/6);
     
    // var value = deviceShaken();
     
@@ -79,9 +79,11 @@ function draw(){
 
 function deviceShaken(){
     
-   // var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); 
-    //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)
-    value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+   // var acc = abs(accelerationX) * abs(accelerationY) * abs(accelerationZ); //no
+    //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)    //no
+    //value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    //value = value + (accelerationX + accelerationY + accelerationZ);
+    value = accelerationX + accelerationY + accelerationZ;
     
     /*
     while(acc > 0){
