@@ -7,14 +7,14 @@ function setup(){
 }
 
 function draw(){
-     background(204);
+    background(204);
     
-     textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
 
     textSize(height/50);
     textAlign(CENTER);
@@ -83,10 +83,10 @@ function draw(){
 
 function deviceShaken(){
     
-    //do {
+    do {
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-   // }
-   // while(value > 0);
+    }
+    while(value > 0);
    
     
    /*
