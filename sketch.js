@@ -1,9 +1,5 @@
 var dots = [];
 var value = 0;
-//var value = deviceShaken();
-//var value = 0;  //starting value of earthquake
-
-
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -26,7 +22,7 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/6);
     
-   // var value = deviceShaken();
+  
     
     /*
     var magnitude = int(map(value, 0, 500, 0, 10)); 
@@ -83,8 +79,11 @@ function deviceShaken(){
     //value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)    //no
     //value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     //value = value + (accelerationX + accelerationY + accelerationZ);
-    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     
+    do {
+    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    }
+    while(value > 0);
     /*
     while(acc > 0){
         acc = acc + (abs(accelerationX) * abs(accelerationY) * abs(accelerationZ));  
