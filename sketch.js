@@ -70,9 +70,10 @@ function draw(){
 }
 
 
-function deviceShaken(acc){
+function deviceShaken(v){
     
-    var acc = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);  
+    var acc = v * (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)); 
+    
     while(acc > 0){
       acc = acc + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));  
     }
