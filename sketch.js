@@ -24,7 +24,7 @@ function draw(){
     textSize(height/30);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text("Il valore:" + value, width/2, height - height/6);
+    text("value", width/2, height - height/6);
     
    // var value = deviceShaken();
     
