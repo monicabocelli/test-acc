@@ -105,7 +105,7 @@ function deviceShaken(){
 
 function calculateAcc(val){
     while(val > 0){
-    val = val + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    val = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     }
     return val;
 
