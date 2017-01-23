@@ -16,14 +16,13 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
     
-    
-    //if(deviceShaken){
+ 
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
     
-    var magnitude = int(map(value, 0, 100, 0, 10));
+    var magnitude = (10*round(map(value, 0, 100, 0, 10)))/10;
     
     textSize(height/40);
     textAlign(CENTER);
