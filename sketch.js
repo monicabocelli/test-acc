@@ -81,6 +81,8 @@ function draw(){
 function deviceShaken(){
     value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     
+    calculateAcc(value);
+    
    /* if (value > 0){
        value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     }
