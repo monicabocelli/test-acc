@@ -16,16 +16,13 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
     
- 
+ /*
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
-    
-    //var list = [];
-    for(value = 0; value < 100; value++){
-      value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-    }
+   */ 
+  
     var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
     
     textSize(height/40);
@@ -82,7 +79,14 @@ function draw(){
         
       }
      */
-     
+       
+    for(value = 0; value < 100; value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)){
+      value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+      textSize(height/50);
+      textAlign(CENTER);
+      textStyle(NORMAL);    
+      text(value, width/2, height - height/8);
+    }
 }
 
 
