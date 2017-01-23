@@ -18,7 +18,7 @@ function draw(){
    
     deviceShaken();
     var d = calculateAcc(value);
-    var magnitude = (round(map(d, 0, 100, 0, 10)) * 10) /10;
+    var magnitude = (round(map(d, 0, 100, 0, 10)) * 0.1) /10;
    /*  
     if (value > 0){
         
@@ -97,8 +97,11 @@ function deviceShaken(){
 }
 
 function calculateAcc(val){
-    val = val + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    val = val + (abs(pAccelerationX) + abs(pAccelerationY) + abs(pAccelerationZ));
     return val;
+    if (val = 0){
+        noLoop();
+    }
 }
 
 /*
