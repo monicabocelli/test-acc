@@ -50,6 +50,11 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
+    
+    textSize(height/50);
+    textAlign(CENTER);
+    textStyle(NORMAL);    
+    text(d, width/2, height - height/8);
         
    // }
     
