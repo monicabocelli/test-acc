@@ -84,6 +84,11 @@ function draw(){
 
 function deviceShaken(){
     value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    
+    var list = [];
+    for(value = 0; value < list.lenght; value++){
+      value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    }
    // value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     /*do {
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
