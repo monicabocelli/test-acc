@@ -54,7 +54,7 @@ function draw(){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(d, width/2, height - height/8);
+    text(d, width/2, height - height/10);
         
    // }
     
