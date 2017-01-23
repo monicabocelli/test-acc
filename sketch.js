@@ -40,12 +40,12 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);
     text("Magnitude", width/2, height - height/5);
-    /*    
+        
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
-   // }
+   
     /*
     if (value > 0){
         
