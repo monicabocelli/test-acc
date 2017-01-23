@@ -23,7 +23,7 @@ function draw(){
     text(value, width/2, height - height/8);
    */ 
   
-    var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
+    var magnitude = (round(map(newvalue, 0, 100, 0, 10)) * 10) /10;
     
     textSize(height/40);
     textAlign(CENTER);
@@ -80,12 +80,12 @@ function draw(){
       }
      */
        
-    for(value = 0; value < 100; value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ)){
-      value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    while(value > 0){
+      var newvalue = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
       textSize(height/50);
       textAlign(CENTER);
       textStyle(NORMAL);    
-      text(value, width/2, height - height/8);
+      text(newvalue, width/2, height - height/8);
     }
 }
 
