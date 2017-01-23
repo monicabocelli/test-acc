@@ -1,8 +1,6 @@
 //var dots = [];
 var value = 0;
 
-var d;
-
 function setup(){
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
@@ -19,7 +17,7 @@ function draw(){
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
    
     deviceShaken();
-   // var d = calculateAcc(value);
+   var d = calculateAcc(value);
     var a = (round(map(d, 0, 100, 0, 10)) * 10)
     var magnitude = a / 10;
    /*  
@@ -80,8 +78,6 @@ function draw(){
 
 function deviceShaken(){
     value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
-    
-    d = calculateAcc(value);
     
    /* if (value > 0){
        value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
