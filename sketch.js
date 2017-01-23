@@ -16,12 +16,12 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
     
- /*
+ 
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
-   */ 
+  
   
     
     while(value > 0){
@@ -29,10 +29,10 @@ function draw(){
       textSize(height/50);
       textAlign(CENTER);
       textStyle(NORMAL);    
-      text(newvalue, width/2, height - height/8);
+      text(newvalue, width/2, height - height/10);
     }
     
-    var magnitude = (round(map(newvalue, 0, 100, 0, 10)) * 10) /10;
+    var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
     
     textSize(height/40);
     textAlign(CENTER);
