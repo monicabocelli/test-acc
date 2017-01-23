@@ -22,6 +22,10 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
     
+    //var list = [];
+    for(value = 0; value < 100; value++){
+      value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    }
     var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
     
     textSize(height/40);
@@ -84,11 +88,11 @@ function draw(){
 
 function deviceShaken(){
     value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
-    
+    /*
     var list = [];
     for(value = 0; value < list.lenght; value++){
       value = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-    }
+    }*/
    // value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     /*do {
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
