@@ -23,7 +23,7 @@ function draw(){
     text(value, width/2, height - height/8);
   
   
-    
+   /* 
     while(value > 0){
       var newvalue = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
       textSize(height/50);
@@ -31,6 +31,8 @@ function draw(){
       textStyle(NORMAL);    
       text(newvalue, width/2, height - height/10);
     }
+    */
+    
     
     var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
     
@@ -38,7 +40,7 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);
     text("Magnitude", width/2, height - height/5);
-        
+    /*    
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
@@ -89,8 +91,10 @@ function draw(){
       }
      */
        
-    
+    noLoop()
 }
+
+
 
 
 function deviceShaken(){
@@ -111,6 +115,8 @@ function deviceShaken(){
         dots.push(new QuakeDots());
     } 
     */
+    
+    redraw()
 }
 
 
