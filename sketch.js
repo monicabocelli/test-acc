@@ -16,20 +16,22 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
    
-    var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
-     
+    deviceShaken();
+    var d = calculateAcc(value);
+    var magnitude = (round(map(d, 0, 100, 0, 10)) * 10) /10;
+   /*  
     if (value > 0){
         
     //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;    
-    var r = value * 10; 
+    var r = d * 10; 
     
     noFill();
     stroke(0);
     strokeWeight(1);
     ellipse (x, y, r, r);
-
+*/
     //magnitude indication
     fill(0);
     noStroke();    
@@ -49,7 +51,7 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
         
-    }
+   // }
     
     /*
     //draw dots and given methods (actions)
@@ -62,7 +64,7 @@ function draw(){
       }
      */
        
-    noLoop()
+   
 }
 
 
@@ -71,7 +73,7 @@ function draw(){
 function deviceShaken(){
     value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     
-    if (value > 0){
+   /* if (value > 0){
        value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     }
     /*
@@ -91,10 +93,13 @@ function deviceShaken(){
     } 
     */
     
-   redraw()
+  // redraw()
 }
 
-
+function calculateAcc(val){
+    val = val + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    return val;
+}
 
 /*
 function QuakeDots(){
