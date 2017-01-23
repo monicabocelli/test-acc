@@ -1,5 +1,5 @@
 //var dots = [];
-var value = 0;
+var value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -98,7 +98,7 @@ function draw(){
 
 
 function deviceShaken(){
-    value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
     /*
     var list = [];
     for(value = 0; value < list.lenght; value++){
