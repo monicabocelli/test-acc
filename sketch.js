@@ -6,7 +6,6 @@ var d;
 function setup(){
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
-    
 }
 
 function draw(){
