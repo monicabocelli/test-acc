@@ -22,7 +22,7 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
     
-    var magnitude = (10*round(map(value, 0, 100, 0, 10)))/10;
+    var magnitude = round(map(value, 0, 100, 0, 10), 2);
     
     textSize(height/40);
     textAlign(CENTER);
