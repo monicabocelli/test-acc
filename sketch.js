@@ -62,7 +62,7 @@ function draw(){
       }
      */
        
-    noLoop()
+    //noLoop()
 }
 
 
@@ -87,7 +87,7 @@ function deviceShaken(){
     } 
     */
     
-    redraw()
+   // redraw()
 }
 
 
