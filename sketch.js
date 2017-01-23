@@ -17,7 +17,7 @@ function draw(){
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
     
     
-    if(deviceShaken){
+    //if(deviceShaken){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
@@ -34,7 +34,7 @@ function draw(){
     textAlign(CENTER);
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
-    }
+   // }
     /*
     if (value > 0){
         
