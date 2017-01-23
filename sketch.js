@@ -1,4 +1,4 @@
-var dots = [];
+//var dots = [];
 var value = 0;
 
 function setup(){
@@ -15,7 +15,9 @@ function draw(){
     fill(0);
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
-
+    
+    
+    if(deviceShaken){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
@@ -32,7 +34,7 @@ function draw(){
     textAlign(CENTER);
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
-    
+    }
     /*
     if (value > 0){
         
@@ -82,13 +84,12 @@ function draw(){
 
 
 function deviceShaken(){
-    
-    do {
+    value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+   // value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
+    /*do {
     value = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
     }
     while(value > 0);
-   
-    
    /*
     //create objects
     for (var i = 0; i < value*100; i++){
