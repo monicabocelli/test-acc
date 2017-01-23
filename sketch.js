@@ -15,38 +15,9 @@ function draw(){
     fill(0);
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
-    
- 
-    textSize(height/50);
-    textAlign(CENTER);
-    textStyle(NORMAL);    
-    text(value, width/2, height - height/8);
-  
-  
-   /* 
-    while(value > 0){
-      var newvalue = value +  (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-      textSize(height/50);
-      textAlign(CENTER);
-      textStyle(NORMAL);    
-      text(newvalue, width/2, height - height/10);
-    }
-    */
-    
-    
-    var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
-    
-    textSize(height/40);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("Magnitude", width/2, height - height/5);
-        
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    text(magnitude,width/2, height - height/6.7);
    
-    /*
+    var magnitude = (round(map(value, 0, 100, 0, 10)) * 10) /10;
+     
     if (value > 0){
         
     //CREATE THE ELLIPSE AREA
@@ -73,12 +44,12 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    /*textSize(height/50);
+    textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/8);*/
+    text(value, width/2, height - height/8);
         
-   // }
+    }
     
     /*
     //draw dots and given methods (actions)
