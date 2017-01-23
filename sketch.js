@@ -1,5 +1,5 @@
 //var dots = [];
-var value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+var value = 0;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -62,14 +62,18 @@ function draw(){
       }
      */
        
-    //noLoop()
+    noLoop()
 }
 
 
 
 
 function deviceShaken(){
-    value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    
+    if (value > 0){
+       value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    }
     /*
     var list = [];
     for(value = 0; value < list.lenght; value++){
@@ -87,7 +91,7 @@ function deviceShaken(){
     } 
     */
     
-   // redraw()
+   redraw()
 }
 
 
