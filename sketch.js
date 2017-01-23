@@ -4,7 +4,7 @@ var value = 0;
 function setup(){
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
-    deviceShaken();
+    
 }
 
 function draw(){
@@ -17,7 +17,7 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
    
-    //deviceShaken();
+    deviceShaken();
     var d = calculateAcc(value);
     var a = (round(map(d, 0, 100, 0, 10)) * 10)
     var magnitude = a / 10;
@@ -104,11 +104,11 @@ function deviceShaken(){
 }
 
 function calculateAcc(val){
+    while(val > 0){
     val = val + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
-    return val;
-    if (val < 1){
-        noLoop();
     }
+    return val;
+
 }
 
 /*
