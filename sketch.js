@@ -34,6 +34,7 @@ function draw(){
     strokeWeight(1);
     ellipse (x, y, r, r);
 */
+    
     //magnitude indication
     fill(0);
     noStroke();    
@@ -70,7 +71,7 @@ function draw(){
         
       }
      */
-       
+  
    
 }
 
