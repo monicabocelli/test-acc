@@ -19,7 +19,7 @@ function draw(){
     deviceShaken();
    var d = calculateAcc(value);
     var a = (round(map(d, 0, 100, 0, 10)) * 10)
-    var magnitude = a / 10;
+    var magnitude = a / 100;
    /*  
     if (value > 0){
         
