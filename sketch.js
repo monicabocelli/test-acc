@@ -151,7 +151,5 @@ this.display = function(){
        }
     ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
 };
- 
 }
-
 */
