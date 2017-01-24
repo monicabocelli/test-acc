@@ -16,9 +16,17 @@ function draw(){
     noStroke();
     text("SHAKE YOUR DEVICE", width/2, height - height/1.1);   
    
-    deviceShaken();
-   var d = calculateAcc(value);
-    var a = (round(map(d, 0, 100, 0, 10)) * 10)
+    for (value > 1; value < 1 ; value += deviceShaken(value){
+
+        textSize(height/50);
+        textAlign(CENTER);
+        textStyle(NORMAL);    
+        text(value, width/2, height - height/8);
+           
+    }
+    
+   //var d = calculateAcc(value);
+    var a = (round(map(value, 0, 100, 0, 10)) * 10)
     var magnitude = a / 100;
    /*  
     if (value > 0){
@@ -42,12 +50,12 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);
     text("Magnitude", width/2, height - height/5);
-        
+ 
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
-    
+    /*
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
@@ -57,7 +65,7 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(d, width/2, height - height/10);
-        
+    */    
    // }
     
     /*
@@ -76,8 +84,10 @@ function draw(){
 
 
 
-function deviceShaken(){
-    value = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+function deviceShaken(val){
+    val = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+    return val;
+}
     
    /* if (value > 0){
        value = value + abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
@@ -100,8 +110,8 @@ function deviceShaken(){
     */
     
   // redraw()
-}
 
+/*
 function calculateAcc(val){
     while(val > 0){
     val = value + (abs(accelerationX) + abs(accelerationY) + abs(accelerationZ));
@@ -109,7 +119,7 @@ function calculateAcc(val){
     return val;
 
 }
-
+*/
 /*
 function QuakeDots(){
     
