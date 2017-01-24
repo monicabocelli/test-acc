@@ -1,6 +1,8 @@
 //var dots = [];
 var value = 0;
 
+
+
 function setup(){
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
